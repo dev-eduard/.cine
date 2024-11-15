@@ -19,4 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach((el) => observer.observe(el));
 });
 
+const notificar = document.getElementById('notificar');
+setInterval(function () {
+  notificar.classList.add('notficacao');
+}, 5000);
+
+notificar.addEventListener('click', function () {
+  notificar.classList.toggle('notficacao');
+});
 //////////////////////////////
