@@ -86,6 +86,7 @@ header {
         padding: 10px;
         border-radius: 5px;
         transition: 0.3s;
+        cursor: pointer;
 
         .notficacao {
           position: relative;
@@ -113,6 +114,47 @@ header {
   }
 }
 
+.submenu {
+  position: fixed;
+  top: 65px;
+  right: 5px;
+  .submenu__content {
+    padding: 5px;
+    background-color: #333;
+    border: 1px solid $text-color1;
+    border-radius: 10px;
+    .submenu__title {
+      font-size: 16px;
+      color: $text-color1;
+      display: flex;
+      margin: 10px 0;
+      justify-content: center;
+    }
+    .submenu__notifications {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .notification {
+        padding: 8px;
+        border-radius: 5px;
+        background: $bg-color2;
+        .notification__title {
+          font-size: 14px;
+        }
+        .notification__date {
+          font-size: 10px;
+          display: flex;
+          justify-content: flex-end;
+          color: #c9c9c9;
+        }
+      }
+    }
+  }
+  &.off {
+    display: none;
+  }
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +168,7 @@ header {
     margin: 0 auto;
     font-weight: bolder;
     width: 100%;
-    
+
     position: absolute;
     top: -50px;
     left: 0;
@@ -192,19 +234,118 @@ footer {
 
   &:hover {
     transition: 0.5s ease;
-    scale: 1.1;
+    scale: 110%;
     box-shadow: 0 0 6px $text-color1;
   }
 }
 
 :has(.movie-box:hover) .movie-box:not(:hover) {
-  scale: 0.8;
+  scale: 90%;
   opacity: 0.5;
-  filter: blur(2px);
 }
 
 @for $i from 1 through 8 {
   .anim__delay#{$i} {
     animation-delay: #{$i * 250ms};
   }
+}
+
+//responsividade
+
+@media screen and (max-width: 768px) {
+  .section {
+    height: 95vh;
+  }
+
+  .content {
+    .title {
+      font-size: 40px;
+      top: -20px;
+      left: 0;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .movie-box {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    .title {
+      font-size: 40px;
+      top: -30px;
+      left: 0;
+    }
+    img {
+      height: 100%;
+    }
+  }
+
+  .movie-box {
+    width: 150px;
+  }
+}
+
+// Animations
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.slideOut {
+  animation: slideOut 0.6s ease-out;
 }

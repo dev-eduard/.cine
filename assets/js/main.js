@@ -16,15 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  elements.forEach((el) => observer.observe(el));
+  elements.forEach((i) => observer.observe(i));
 });
 
 const notificar = document.getElementById('notificar');
-setInterval(function () {
-  notificar.classList.add('notficacao');
-}, 5000);
+let notificou = false;
+
+if (!notificou) {
+  setTimeout(() => {
+    notificar.classList.add('notficacao');
+    notificou = true;
+  }, 5000);
+}
+
+
+const submenu = document.getElementById('submenu');
 
 notificar.addEventListener('click', function () {
-  notificar.classList.toggle('notficacao');
+  submenu.classList.toggle('off');
 });
 //////////////////////////////
