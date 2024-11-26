@@ -8,7 +8,7 @@ class Dados {
   }
 }
 let user = [];
-user.push(new Dados('Guest', 'guest'));
+user.push(new Dados('Guest', '1234'));
 
 ////////////////////////////////////////
 
