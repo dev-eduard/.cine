@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>.Cine</title>
     <meta name="description" content="Explore titulos de filmes e séries">
-    <link rel="icon" href="/assets/img/logo.ICO">
     <link rel="stylesheet" href="assets/styles/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -22,7 +21,7 @@
             <li><a href="#section__series">Séries</a></li>
             <li><a href="#section__animes">Animes</a></li>
             <li><a><i id="notificar" class="fa-regular fa-bell"></i></a></li>
-            <li><a href="#"><i class="fa-regular fa-user-circle"></i></a></li>
+            <li><a><i id="user" class="fa-regular fa-user-circle"></i></a></li>
         </ul>
     </header>
 
@@ -31,19 +30,30 @@
             <span class="submenu__title">Notificações</span>
             <div class="submenu__notifications">
                 <div class="notification">
-                    <span class="notification__title">Novo filme adicionado</span>
-                    <span class="notification__description">SASS foi adicionado</span>
+                    <span class="notification__title">Novos filmes adicionados</span>
+                    <span class="notification__description"></span>
                     <span class="notification__date">Há&nbsp;<span id="dias1"></span></span>
                 </div>
                 <div class="notification">
-                    <span class="notification__title">Nova série adicionada</span>
+                    <span class="notification__title">Novas séries adicionadas</span>
                     <span class="notification__date">Há&nbsp;<span id="dias2"></span></span>
                 </div>
                 <div class="notification">
-                    <span class="notification__title">Novo anime adicionado</span>
+                    <span class="notification__title">Novos animes adicionados</span>
                     <span class="notification__date">Há&nbsp;<span id="dias3"></span></span>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div id="submenu-user" class="submenu off">
+        <div class="submenu__content">
+            <span class="submenu__title" style="color: #ffffff;"> Visitante </span>
+                <div class="submenu__notifications">    
+                    <div class="notification">
+                        <a href="index.html" style="color: #ffffff; text-decoration: none;"><span class="notification__title">Sair</span></a>
+                    </div>
+                </div>
         </div>
     </div>
 

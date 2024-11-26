@@ -85,7 +85,7 @@ header ul li a .notficacao {
   position: relative;
 }
 header ul li a .notficacao::after {
-  content: "1";
+  content: "3";
   position: absolute;
   top: -8px;
   right: -10px;
@@ -151,6 +151,45 @@ header ul li a:hover {
   display: none;
 }
 
+.submenu-user {
+  position: fixed;
+  z-index: 1000;
+  top: 65px;
+  right: 5px;
+}
+.submenu-user .submenu__content {
+  padding: 5px;
+  background-color: #333;
+  border: 1px solid #f5c518;
+  border-radius: 10px;
+}
+.submenu-user .submenu__content .submenu__title {
+  font-size: 16px;
+  color: #f5c518;
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+}
+.submenu-user .submenu__content .submenu__notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submenu-user .submenu__content .submenu__notifications .notification {
+  padding: 8px;
+  border-radius: 5px;
+  background: #1e1e1e;
+}
+.submenu-user .submenu__content .submenu__notifications .notification .notification__title {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.submenu-user.off {
+  display: none;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -176,13 +215,10 @@ header ul li a:hover {
 .movie-box {
   width: 250px;
   height: auto;
-  background-color: #333;
   color: #f5c518;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -192,6 +228,16 @@ header ul li a:hover {
   opacity: 1;
   transition: 0.6s;
   transform: translateY(0);
+}
+.movie-box img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  transition: scale 350ms ease, opacity 350ms linear;
+}
+.movie-box img:hover {
+  transition: 0.5s ease;
+  scale: 110%;
+  box-shadow: 0 0 6px #f5c518;
 }
 
 footer {
@@ -208,17 +254,6 @@ footer {
 footer span :nth-child(1) {
   color: #f5c518;
   text-decoration: none;
-}
-
-.movie-box img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  transition: scale 350ms ease, opacity 350ms linear;
-}
-.movie-box img:hover {
-  transition: 0.5s ease;
-  scale: 110%;
-  box-shadow: 0 0 6px #f5c518;
 }
 
 :has(.movie-box:hover) .movie-box:not(:hover) {
@@ -248,6 +283,10 @@ footer span :nth-child(1) {
     font-size: 40px;
     top: -30px;
     left: 0;
+  }
+  .content .movie-box {
+    width: 170px;
+    height: auto;
   }
   .content img {
     height: 100%;

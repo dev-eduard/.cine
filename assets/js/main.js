@@ -8,7 +8,7 @@ class Dados {
   }
 }
 let user = [];
-user.push(new Dados('Eduardo', 'admin'));
+user.push(new Dados('Guest', 'guest'));
 
 ////////////////////////////////////////
 
@@ -41,7 +41,6 @@ for (let i = 0; i < user.length; i++) {
     }
     else if (username.value == user[i].username && senha.value == user[i].password)
     {
-
       messageLogin.innerHTML = `Conectado com sucesso!`;
       messageLogin.style.visibility = "visible";
       messageLogin.style.color = "lime";

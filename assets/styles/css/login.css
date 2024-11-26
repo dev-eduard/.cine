@@ -70,6 +70,7 @@ body {
   color: #1db954;
   visibility: hidden;
   text-align: center;
+  margin-top: 15px;
 }
 .area__bg-login .area__login--form #form-login .form-group {
   position: relative;

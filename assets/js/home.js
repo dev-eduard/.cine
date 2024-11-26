@@ -33,6 +33,17 @@ const submenu = document.getElementById("submenu");
 notificar.addEventListener("click", function () {
   submenu.classList.toggle("off");
   notificar.classList.remove("notficacao");
+  submenuUser.classList.add("off");
+});
+
+
+const submenuUser = document.getElementById("submenu-user");
+const userOpt = document.getElementById("user");
+
+userOpt.addEventListener("click", function () {
+  submenuUser.classList.toggle("off");
+  userOpt.classList.remove("notficacao");
+  submenu.classList.add("off");
 });
 //////////////////////////////
 
