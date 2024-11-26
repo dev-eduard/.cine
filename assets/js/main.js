@@ -1,38 +1,53 @@
-//////////////////////////////
-
-document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll('.animate-on-scroll');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated', 'animate__zoomIn');
-        entry.target.style.opacity = 1;
-      }
-      else {
-        entry.target.classList.remove('animate__animated', 'animate__zoomIn');
-        entry.target.style.opacity = 0;
-      }
-    });
-  });
-
-  elements.forEach((i) => observer.observe(i));
-});
-
-const notificar = document.getElementById('notificar');
-let notificou = false;
-
-if (!notificou) {
-  setTimeout(() => {
-    notificar.classList.add('notficacao');
-    notificou = true;
-  }, 5000);
+class Dados {
+  username;
+  password;
+  
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
+  }
 }
+let user = [];
+user.push(new Dados('Eduardo', 'admin'));
 
+////////////////////////////////////////
 
-const submenu = document.getElementById('submenu');
+const messageLogin = document.getElementById("message-login");
+const btnLogin = document.getElementById("login");
+const username = document.getElementById("username");
+const senha = document.getElementById("password");
 
-notificar.addEventListener('click', function () {
-  submenu.classList.toggle('off');
-});
-//////////////////////////////
+////////////////////////////////////////
+
+for (let i = 0; i < user.length; i++) {
+  btnLogin.addEventListener("click", () => {
+    if (senha.value == "" || username.value == "" || senha.value == null || username.value == null)
+      {
+        messageLogin.innerHTML = `Preencha coretamente!`;
+        messageLogin.style.visibility = "visible";
+        messageLogin.style.color = "red";
+      }
+    else if (username.value != user[i].username)
+    {
+      messageLogin.innerHTML = `Usuário inexistente!`;
+      messageLogin.style.visibility = "visible";
+      messageLogin.style.color = "red";
+    }
+    else if (senha.value != user[i].password)
+    {
+      messageLogin.innerHTML = `Senha incorreta!`;
+      messageLogin.style.visibility = "visible";
+      messageLogin.style.color = "red";
+    }
+    else if (username.value == user[i].username && senha.value == user[i].password)
+    {
+
+      messageLogin.innerHTML = `Conectado com sucesso!`;
+      messageLogin.style.visibility = "visible";
+      messageLogin.style.color = "lime";
+      setInterval(() => {
+        window.location.href = "home.html";
+      }, 3500);
+    }
+  });
+}

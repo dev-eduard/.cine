@@ -1,0 +1,140 @@
+@use "all" as *;
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    color: $text-color;
+    background: linear-gradient(120deg, $bg-color, #505050);
+    background-size: 400% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% {  
+        background-position: 0%;
+        
+    }
+    50% {
+        background-position: 100%;
+    }
+}
+
+.area__bg-login {
+    width: 70%;
+    margin: 15rem auto;
+    background-color: $bg-color2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    display: grid;
+    grid-template-areas:
+        "textInfo form"
+        "textInfo form";
+    gap: 20px 15rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    //responsivity
+    @media (max-width: 768px) {
+        grid-template-areas:
+        "textInfo"
+        "form";
+    }
+
+    .area__login--textInfo {
+        grid-area: textInfo;
+        text-align: center;
+    }
+
+    .area__login--form {
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        #form-login {
+            display: flex;
+            flex-direction: column;
+
+            button[id="login"] {
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: $bg-color-lighter;
+                border: 1px solid $bg-color;
+                color: $text-color;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $bg-color;
+                    transition: all 0.4s ease;
+                    transform: scale(1.1);
+                }
+            }
+            p[id="message-login"]{
+                color: #1db954;
+                visibility: hidden;
+                text-align: center;
+                
+            }
+
+            .form-group {
+                position: relative;
+                margin-bottom: 15px;
+                label {
+                    display: block;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    background: $bg-color2;
+                    padding: 0 5px;
+                    font-size: 16px;
+                    pointer-events: none;
+                    transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                }
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    outline: none;
+                    font-size: 16px;
+                    background-color: $bg-color2;
+                    color: $text-color;
+
+                    &:focus + label,
+                    &:not(:placeholder-shown) + label {
+                        top: 0;
+                        font-size: 15px;
+                        color: $text-color;
+                        font-family: Arial;
+                    }
+                    &[id="username"],
+                    &[id="password"] {
+                        width: calc(100%);
+                        padding: 10px;
+                        margin-bottom: 10px;
+                        border: 1px solid #fff;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                        transition: 0.5s ease;
+                        -webkit-transition: 0.5s ease;
+                        outline: none;
+
+                        &:focus {
+                            border: 1px solid $text-color1;
+                            border-radius: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

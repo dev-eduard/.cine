@@ -103,6 +103,7 @@ header ul li a:hover {
 
 .submenu {
   position: fixed;
+  z-index: 1000;
   top: 65px;
   right: 5px;
 }
@@ -131,6 +132,14 @@ header ul li a:hover {
 }
 .submenu .submenu__content .submenu__notifications .notification .notification__title {
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.submenu .submenu__content .submenu__notifications .notification .notification__description {
+  font-size: 12px;
+  color: #c9c9c9;
+  margin: 0;
 }
 .submenu .submenu__content .submenu__notifications .notification .notification__date {
   font-size: 10px;
@@ -217,38 +226,6 @@ footer span :nth-child(1) {
   opacity: 0.5;
 }
 
-.anim__delay1 {
-  animation-delay: 250ms;
-}
-
-.anim__delay2 {
-  animation-delay: 500ms;
-}
-
-.anim__delay3 {
-  animation-delay: 750ms;
-}
-
-.anim__delay4 {
-  animation-delay: 1000ms;
-}
-
-.anim__delay5 {
-  animation-delay: 1250ms;
-}
-
-.anim__delay6 {
-  animation-delay: 1500ms;
-}
-
-.anim__delay7 {
-  animation-delay: 1750ms;
-}
-
-.anim__delay8 {
-  animation-delay: 2000ms;
-}
-
 @media screen and (max-width: 768px) {
   .section {
     height: 95vh;
@@ -279,56 +256,36 @@ footer span :nth-child(1) {
     width: 150px;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fadeIn {
-  animation: fadeIn 0.6s ease-out;
+.anim__delay1 {
+  animation-delay: 250ms;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-}
-.fadeOut {
-  animation: fadeOut 0.6s ease-out;
+.anim__delay2 {
+  animation-delay: 500ms;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.slideIn {
-  animation: slideIn 0.6s ease-out;
+.anim__delay3 {
+  animation-delay: 750ms;
 }
 
-@keyframes slideOut {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(100%);
-  }
+.anim__delay4 {
+  animation-delay: 1000ms;
 }
-.slideOut {
-  animation: slideOut 0.6s ease-out;
+
+.anim__delay5 {
+  animation-delay: 1250ms;
+}
+
+.anim__delay6 {
+  animation-delay: 1500ms;
+}
+
+.anim__delay7 {
+  animation-delay: 1750ms;
+}
+
+.anim__delay8 {
+  animation-delay: 2000ms;
 }
 
 /*# sourceMappingURL=style.css.map */
