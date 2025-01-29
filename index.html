@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.Cine</title>
 
-    <link rel="stylesheet" href="assets/styles/css/login.css">
-    <link rel="stylesheet" href="assets/styles/css/style.css">
+    <link rel="stylesheet" href="assets/styles/css/login.css" />
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
 
-    <link rel="icon" href="assets/img/logo.ICO">
-</head>
+    <link rel="icon" href="assets/img/logo.ICO" />
+  </head>
 
-<body>
-    <div class="area__bg-login">
-        <div class="area__login--textInfo">
-            <h1>Seja bem-vindo ao .<span style="color: #f5c518">Cine</span>!</h1>
-            <p>Para acessar a plataforma, faça seu login.<br>Para acessar como visitante use:<br> Usuário: Guest <br>Senha: 1234</p>
-        </div>
-        <div class="area__login--form">
-            <form id="form-login" action="javascript:void(0);" method="POST">
-                <div class="form-group">
-                    <input type="text" id="username" name="username" required />
-                    <label for="username">Usuário</label>
-                </div>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" required />
-                    <label for="password">Senha</label>
-                </div>
-                <button type="submit" id="login">Entrar</button>
-                <p id="message-login">..</p>
-            </form>
-        </div>
+  <body>
+    <div class="area__bg-login" id="area-login">
+      <div class="area__login--textInfo">
+        <h1>Seja bem-vindo ao .<span style="color: #f5c518">Cine</span>!</h1>
+        <p>Para acessar a plataforma, faça login.</p>
+      </div>
+      <div class="area__login--form">
+        <form id="form-login" action="javascript:void(0);" method="POST">
+          <div class="form-group">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              autocomplete="username"
+              required
+            />
+            <label for="username">Usuário</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+            <label for="password">Senha</label>
+          </div>
+          <button type="submit" id="login">Entrar</button>
+          <span>ou</span>
+          <button type="button" id="registrar">Criar conta</button>
+          <p id="message-login"></p>
+        </form>
+      </div>
     </div>
+
+    <!-- registro -->
+
+    <div class="area__bg-registro" id="area-registro">
+      <div class="area__login--textInfo">
+        <h1>Seja bem-vindo ao .<span style="color: #f5c518">Cine</span>!</h1>
+        <p>Para acessar a plataforma, crie uma conta.</p>
+      </div>
+      <div class="area__login--form">
+        <form
+          id="form-registro"
+          action="javascript:void(0);"
+          method="POST"
+          autocomplete="off"
+        >
+          <div class="form-group">
+            <input type="text" id="criar_username" name="username" required />
+            <label for="criar_username">Usuário</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="criar_password"
+              name="password"
+              required
+            />
+            <label for="criar_password">Senha</label>
+          </div>
+          <button type="submit" id="registro">Criar conta</button>
+          <span>ou</span>
+          <button type="button" id="logar">Fazer login</button>
+          <p id="message-registro"></p>
+        </form>
+      </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

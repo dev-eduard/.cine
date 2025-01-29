@@ -9,6 +9,10 @@ body {
   background: linear-gradient(120deg, #121212, #505050);
   background-size: 400% 200%;
   animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 @keyframes gradient {
@@ -19,9 +23,9 @@ body {
     background-position: 100%;
   }
 }
-.area__bg-login {
+.area__bg-login,
+.area__bg-registro {
   width: 70%;
-  margin: 15rem auto;
   background-color: #1e1e1e;
   border-radius: 10px;
   padding: 20px;
@@ -34,25 +38,47 @@ body {
   flex-wrap: wrap;
 }
 @media (max-width: 768px) {
-  .area__bg-login {
+  .area__bg-login,
+  .area__bg-registro {
     grid-template-areas: "textInfo" "form";
   }
 }
-.area__bg-login .area__login--textInfo {
+.area__bg-login .area__login--textInfo,
+.area__bg-registro .area__login--textInfo {
   grid-area: textInfo;
   text-align: center;
 }
-.area__bg-login .area__login--form {
+.area__bg-login .area__login--form,
+.area__bg-registro .area__login--form {
   grid-area: form;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
-.area__bg-login .area__login--form #form-login {
+.area__bg-login .area__login--form #form-login,
+.area__bg-login .area__login--form #form-registro,
+.area__bg-registro .area__login--form #form-login,
+.area__bg-registro .area__login--form #form-registro {
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
-.area__bg-login .area__login--form #form-login button[id=login] {
+.area__bg-login .area__login--form #form-login span,
+.area__bg-login .area__login--form #form-registro span,
+.area__bg-registro .area__login--form #form-login span,
+.area__bg-registro .area__login--form #form-registro span {
+  align-self: center;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+.area__bg-login .area__login--form #form-login button[id=login],
+.area__bg-login .area__login--form #form-login button[id=registro],
+.area__bg-login .area__login--form #form-registro button[id=login],
+.area__bg-login .area__login--form #form-registro button[id=registro],
+.area__bg-registro .area__login--form #form-login button[id=login],
+.area__bg-registro .area__login--form #form-login button[id=registro],
+.area__bg-registro .area__login--form #form-registro button[id=login],
+.area__bg-registro .area__login--form #form-registro button[id=registro] {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -61,22 +87,66 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.area__bg-login .area__login--form #form-login button[id=login]:hover {
+.area__bg-login .area__login--form #form-login button[id=login]:hover,
+.area__bg-login .area__login--form #form-login button[id=registro]:hover,
+.area__bg-login .area__login--form #form-registro button[id=login]:hover,
+.area__bg-login .area__login--form #form-registro button[id=registro]:hover,
+.area__bg-registro .area__login--form #form-login button[id=login]:hover,
+.area__bg-registro .area__login--form #form-login button[id=registro]:hover,
+.area__bg-registro .area__login--form #form-registro button[id=login]:hover,
+.area__bg-registro .area__login--form #form-registro button[id=registro]:hover {
   background-color: #121212;
   transition: all 0.4s ease;
   transform: scale(1.1);
 }
-.area__bg-login .area__login--form #form-login p[id=message-login] {
+.area__bg-login .area__login--form #form-login button[id=registrar],
+.area__bg-login .area__login--form #form-login button[id=logar],
+.area__bg-login .area__login--form #form-registro button[id=registrar],
+.area__bg-login .area__login--form #form-registro button[id=logar],
+.area__bg-registro .area__login--form #form-login button[id=registrar],
+.area__bg-registro .area__login--form #form-login button[id=logar],
+.area__bg-registro .area__login--form #form-registro button[id=registrar],
+.area__bg-registro .area__login--form #form-registro button[id=logar] {
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 5px;
+  border: none;
+  background-color: #444;
+  border: 1px solid #121212;
+  color: #fff;
+  cursor: pointer;
+}
+.area__bg-login .area__login--form #form-login button[id=registrar]:hover,
+.area__bg-login .area__login--form #form-login button[id=logar]:hover,
+.area__bg-login .area__login--form #form-registro button[id=registrar]:hover,
+.area__bg-login .area__login--form #form-registro button[id=logar]:hover,
+.area__bg-registro .area__login--form #form-login button[id=registrar]:hover,
+.area__bg-registro .area__login--form #form-login button[id=logar]:hover,
+.area__bg-registro .area__login--form #form-registro button[id=registrar]:hover,
+.area__bg-registro .area__login--form #form-registro button[id=logar]:hover {
+  background-color: #121212;
+  transition: all 0.4s ease;
+}
+.area__bg-login .area__login--form #form-login p[id=message-login],
+.area__bg-login .area__login--form #form-registro p[id=message-login],
+.area__bg-registro .area__login--form #form-login p[id=message-login],
+.area__bg-registro .area__login--form #form-registro p[id=message-login] {
   color: #1db954;
   visibility: hidden;
   text-align: center;
   margin-top: 15px;
 }
-.area__bg-login .area__login--form #form-login .form-group {
+.area__bg-login .area__login--form #form-login .form-group,
+.area__bg-login .area__login--form #form-registro .form-group,
+.area__bg-registro .area__login--form #form-login .form-group,
+.area__bg-registro .area__login--form #form-registro .form-group {
   position: relative;
   margin-bottom: 15px;
 }
-.area__bg-login .area__login--form #form-login .form-group label {
+.area__bg-login .area__login--form #form-login .form-group label,
+.area__bg-login .area__login--form #form-registro .form-group label,
+.area__bg-registro .area__login--form #form-login .form-group label,
+.area__bg-registro .area__login--form #form-registro .form-group label {
   display: block;
   font-weight: bold;
   position: absolute;
@@ -90,7 +160,10 @@ body {
   transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-.area__bg-login .area__login--form #form-login .form-group input {
+.area__bg-login .area__login--form #form-login .form-group input,
+.area__bg-login .area__login--form #form-registro .form-group input,
+.area__bg-registro .area__login--form #form-login .form-group input,
+.area__bg-registro .area__login--form #form-registro .form-group input {
   width: 100%;
   padding: 10px;
   outline: none;
@@ -98,13 +171,31 @@ body {
   background-color: #1e1e1e;
   color: #fff;
 }
-.area__bg-login .area__login--form #form-login .form-group input:focus + label, .area__bg-login .area__login--form #form-login .form-group input:not(:placeholder-shown) + label {
+.area__bg-login .area__login--form #form-login .form-group input:focus + label, .area__bg-login .area__login--form #form-login .form-group input:not(:placeholder-shown) + label,
+.area__bg-login .area__login--form #form-registro .form-group input:focus + label,
+.area__bg-login .area__login--form #form-registro .form-group input:not(:placeholder-shown) + label,
+.area__bg-registro .area__login--form #form-login .form-group input:focus + label,
+.area__bg-registro .area__login--form #form-login .form-group input:not(:placeholder-shown) + label,
+.area__bg-registro .area__login--form #form-registro .form-group input:focus + label,
+.area__bg-registro .area__login--form #form-registro .form-group input:not(:placeholder-shown) + label {
   top: 0;
   font-size: 15px;
   color: #fff;
   font-family: Arial;
 }
-.area__bg-login .area__login--form #form-login .form-group input[id=username], .area__bg-login .area__login--form #form-login .form-group input[id=password] {
+.area__bg-login .area__login--form #form-login .form-group input[id=username], .area__bg-login .area__login--form #form-login .form-group input[id=password], .area__bg-login .area__login--form #form-login .form-group input[id=criar_username], .area__bg-login .area__login--form #form-login .form-group input[id=criar_password],
+.area__bg-login .area__login--form #form-registro .form-group input[id=username],
+.area__bg-login .area__login--form #form-registro .form-group input[id=password],
+.area__bg-login .area__login--form #form-registro .form-group input[id=criar_username],
+.area__bg-login .area__login--form #form-registro .form-group input[id=criar_password],
+.area__bg-registro .area__login--form #form-login .form-group input[id=username],
+.area__bg-registro .area__login--form #form-login .form-group input[id=password],
+.area__bg-registro .area__login--form #form-login .form-group input[id=criar_username],
+.area__bg-registro .area__login--form #form-login .form-group input[id=criar_password],
+.area__bg-registro .area__login--form #form-registro .form-group input[id=username],
+.area__bg-registro .area__login--form #form-registro .form-group input[id=password],
+.area__bg-registro .area__login--form #form-registro .form-group input[id=criar_username],
+.area__bg-registro .area__login--form #form-registro .form-group input[id=criar_password] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -115,9 +206,25 @@ body {
   -webkit-transition: 0.5s ease;
   outline: none;
 }
-.area__bg-login .area__login--form #form-login .form-group input[id=username]:focus, .area__bg-login .area__login--form #form-login .form-group input[id=password]:focus {
+.area__bg-login .area__login--form #form-login .form-group input[id=username]:focus, .area__bg-login .area__login--form #form-login .form-group input[id=password]:focus, .area__bg-login .area__login--form #form-login .form-group input[id=criar_username]:focus, .area__bg-login .area__login--form #form-login .form-group input[id=criar_password]:focus,
+.area__bg-login .area__login--form #form-registro .form-group input[id=username]:focus,
+.area__bg-login .area__login--form #form-registro .form-group input[id=password]:focus,
+.area__bg-login .area__login--form #form-registro .form-group input[id=criar_username]:focus,
+.area__bg-login .area__login--form #form-registro .form-group input[id=criar_password]:focus,
+.area__bg-registro .area__login--form #form-login .form-group input[id=username]:focus,
+.area__bg-registro .area__login--form #form-login .form-group input[id=password]:focus,
+.area__bg-registro .area__login--form #form-login .form-group input[id=criar_username]:focus,
+.area__bg-registro .area__login--form #form-login .form-group input[id=criar_password]:focus,
+.area__bg-registro .area__login--form #form-registro .form-group input[id=username]:focus,
+.area__bg-registro .area__login--form #form-registro .form-group input[id=password]:focus,
+.area__bg-registro .area__login--form #form-registro .form-group input[id=criar_username]:focus,
+.area__bg-registro .area__login--form #form-registro .form-group input[id=criar_password]:focus {
   border: 1px solid #f5c518;
   border-radius: 25px;
+}
+
+.area__bg-registro {
+  display: none;
 }
 
 /*# sourceMappingURL=login.css.map */
