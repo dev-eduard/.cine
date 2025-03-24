@@ -1,119 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.Cine</title>
-    <meta name="description" content="Explore titulos de filmes e séries">
-    <link rel="stylesheet" href="assets/styles/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <meta name="theme-color" content="#121212">
-</head>
+    <meta name="description" content="Explore titulos de filmes e séries" />
+    <link rel="stylesheet" href="assets/styles/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <meta name="theme-color" content="#121212" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <span>Cine</span>
-        <ul>
-            <li><a href="#section__filmes">Filmes</a></li>
-            <li><a href="#section__series">Séries</a></li>
-            <li><a href="#section__animes">Animes</a></li>
-            <li><a><i id="notificar" class="fa-regular fa-bell"></i></a></li>
-            <li><a><i id="user" class="fa-regular fa-user-circle"></i></a></li>
-        </ul>
+      <span>Cine</span>
+      <ul>
+        <li><a href="#section__filmes">Filmes</a></li>
+        <li><a href="#section__series">Séries</a></li>
+        <li><a href="#section__animes">Animes</a></li>
+        <li>
+          <a><i id="notificar" class="fa-regular fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i id="user" class="fa-regular fa-user-circle"></i></a>
+        </li>
+      </ul>
     </header>
 
     <div id="submenu" class="submenu off">
-        <div class="submenu__content">
-            <span class="submenu__title">Notificações</span>
-            <div class="submenu__notifications">
-                <div class="notification">
-                    <span class="notification__title">Novos filmes adicionados</span>
-                    <span class="notification__description"></span>
-                    <span class="notification__date">Há&nbsp;<span id="dias1"></span></span>
-                </div>
-                <div class="notification">
-                    <span class="notification__title">Novas séries adicionadas</span>
-                    <span class="notification__date">Há&nbsp;<span id="dias2"></span></span>
-                </div>
-                <div class="notification">
-                    <span class="notification__title">Novos animes adicionados</span>
-                    <span class="notification__date">Há&nbsp;<span id="dias3"></span></span>
-                </div>
-            </div>
+      <div class="submenu__content">
+        <span class="submenu__title">Notificações</span>
+        <div class="submenu__notifications">
+          <div class="notification">
+            <span class="notification__title">Novos filmes adicionados</span>
+            <span class="notification__description"></span>
+            <span class="notification__date"
+              >Há&nbsp;<span id="dias1"></span
+            ></span>
+          </div>
+          <div class="notification">
+            <span class="notification__title">Novas séries adicionadas</span>
+            <span class="notification__date"
+              >Há&nbsp;<span id="dias2"></span
+            ></span>
+          </div>
+          <div class="notification">
+            <span class="notification__title">Novos animes adicionados</span>
+            <span class="notification__date"
+              >Há&nbsp;<span id="dias3"></span
+            ></span>
+          </div>
         </div>
+      </div>
     </div>
-    
+
     <div id="submenu-user" class="submenu off">
-        <div class="submenu__content">
-            <span class="submenu__title" style="color: #ffffff;">Visitante</span>
-                <div class="submenu__notifications">    
-                    <div class="notification">
-                        <a href="index.html" style="color: #ffffff; text-decoration: none;"><span class="notification__title">Sair</span></a>
-                    </div>
-                </div>
+      <div class="submenu__content">
+        <span class="submenu__title" style="color: #ffffff">Visitante</span>
+        <div class="submenu__notifications">
+          <div class="notification">
+            <a href="index.html" style="color: #ffffff; text-decoration: none"
+              ><span class="notification__title">Sair</span></a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="section__filmes" class="section">
-        <section class="content">
-            <span class="animate-on-scroll anim__delay1 title">Filmes recomendados</span>
-            <div class="movie-box animate-on-scroll anim__delay2 filme__recomendado--1"><img
-                    src="assets/img/coracoesdeferro.webp" alt="Filme: Corações de Ferro" style="object-fit: cover;">
-            </div>
-            <div class="movie-box animate-on-scroll anim__delay3"><img src="assets/img/ateoultimohomen.jpg"
-                    alt="Filme: Até o último homem"></div>
-            <div class="movie-box animate-on-scroll anim__delay4"><img src="assets/img/ojogodaimitacao.webp"
-                    alt="Filme: O jogo da imitação"></div>
-            <div class="movie-box animate-on-scroll anim__delay5"><img src="assets/img/invencivel.jpg"
-                    alt="Filme: Invencível"></div>
-            <div class="movie-box animate-on-scroll anim__delay6"><img src="assets/img/creed.webp"
-                    alt="Filme: O Gambito da Rainha"></div>
-        </section>
+      <section class="content">
+        <span class="animate-on-scroll anim__delay1 title"
+          >Filmes recomendados</span
+        >
+        <div
+          class="movie-box animate-on-scroll anim__delay2 filme__recomendado--1"
+        >
+          <img
+            src="assets/img/coracoesdeferro.webp"
+            alt="Filme: Corações de Ferro"
+            style="object-fit: cover"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay3">
+          <img
+            src="assets/img/ateoultimohomen.jpg"
+            alt="Filme: Até o último homem"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay4">
+          <img
+            src="assets/img/ojogodaimitacao.webp"
+            alt="Filme: O jogo da imitação"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay5">
+          <img src="assets/img/invencivel.jpg" alt="Filme: Invencível" />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay6">
+          <img src="assets/img/creed.webp" alt="Filme: O Gambito da Rainha" />
+        </div>
+      </section>
     </div>
 
     <div id="section__series" class="section">
-        <section class="content">
-            <span class="animate-on-scroll anim__delay1 title">Séries</span>
-            <div class="movie-box animate-on-scroll anim__delay2"><img src="assets/img/supernatural.jpg"
-                    alt="Série: Supernatural"></div>
-            <div class="movie-box animate-on-scroll anim__delay3"><img src="assets/img/strangerthings.avif"
-                    alt="Série: Stranger Things"></div>
-            <div class="movie-box animate-on-scroll anim__delay4"><img src="assets/img/LaCasaDePapel.png"
-                    alt="Série: La casa de papel"></div>
-            <div class="movie-box animate-on-scroll anim__delay5"><img src="assets/img/TheUmbrellaAcademy.jpg"
-                    alt="Série: The Umbrella Academy"></div>
-            <div class="movie-box animate-on-scroll anim__delay6"><img src="assets/img/gambitodarainha.webp"
-                    alt="Série: O Gambito da Rainha"></div>
-        </section>
+      <section class="content">
+        <span class="animate-on-scroll anim__delay1 title">Séries</span>
+        <div class="movie-box animate-on-scroll anim__delay2">
+          <img src="assets/img/supernatural.jpg" alt="Série: Supernatural" />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay3">
+          <img
+            src="assets/img/strangerthings.avif"
+            alt="Série: Stranger Things"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay4">
+          <img
+            src="assets/img/LaCasaDePapel.png"
+            alt="Série: La casa de papel"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay5">
+          <img
+            src="assets/img/TheUmbrellaAcademy.jpg"
+            alt="Série: The Umbrella Academy"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay6">
+          <img
+            src="assets/img/gambitodarainha.webp"
+            alt="Série: O Gambito da Rainha"
+          />
+        </div>
+      </section>
     </div>
 
     <div id="section__animes" class="section">
-        <section class="content">
-            <span class="animate-on-scroll anim__delay1 title">Animes</span>
-            <div class="movie-box animate-on-scroll anim__delay2"><img src="assets/img/onepiece.jpg"
-                    alt="Anime: One Piece"></div>
-            <div class="movie-box animate-on-scroll anim__delay3"><img src="assets/img/demonslayer.webp"
-                    alt="Anime: Demon Slayer: Kimetsu no Yaiba"></div>
-            <div class="movie-box animate-on-scroll anim__delay4"><img src="assets/img/jujutsukaisenn.webp"
-                    alt="Anime: Jujutsu Kaisen"></div>
-            <div class="movie-box animate-on-scroll anim__delay5"><img src="assets/img/hxh.avif"
-                    alt="Anime: Hunter × Hunter"></div>
-            <div class="movie-box animate-on-scroll anim__delay6"><img src="assets/img/deathnnote.avif"
-                    alt="Anime: Death Note"></div>
-        </section>
+      <section class="content">
+        <span class="animate-on-scroll anim__delay1 title">Animes</span>
+        <div class="movie-box animate-on-scroll anim__delay2">
+          <img src="assets/img/onepiece.jpg" alt="Anime: One Piece" />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay3">
+          <img
+            src="assets/img/demonslayer.webp"
+            alt="Anime: Demon Slayer: Kimetsu no Yaiba"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay4">
+          <img
+            src="assets/img/jujutsukaisenn.webp"
+            alt="Anime: Jujutsu Kaisen"
+          />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay5">
+          <img src="assets/img/hxh.avif" alt="Anime: Hunter × Hunter" />
+        </div>
+        <div class="movie-box animate-on-scroll anim__delay6">
+          <img src="assets/img/deathnnote.avif" alt="Anime: Death Note" />
+        </div>
+      </section>
     </div>
 
     <footer>
-        <span>&copy; Site created by <a target="_blank" href="https://marcoseduardo.dev.br">eduardo_c126</a>, all
-            rights
-            reserved!</span>
+      <span
+        >&copy; Created by
+        <a target="_blank" href="https://marcoseduardo.dev.br">dev.eduard</a>,
+        all rights reserved!</span
+      >
     </footer>
 
     <script src="assets/js/home.js"></script>
     <script src="assets/js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
